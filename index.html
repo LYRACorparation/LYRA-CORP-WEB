@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090b14">
+<title>LYRA-Corp | Game Development Studio</title>
+<style>
+:root{--bg:#090b14;--panel:#111522;--panel2:#171d2e;--line:#29324a;--text:#f4f6ff;--muted:#aab3cc;--accent:#9b7bff;--accent2:#55e6d2;--danger:#ff8585}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#222044 0,transparent 35%),var(--bg);color:var(--text);font:16px/1.6 Inter,Segoe UI,Arial,sans-serif}button,input,select,textarea{font:inherit}button,a{transition:.2s}a{color:inherit;text-decoration:none}.topbar{position:sticky;top:0;z-index:10;background:#090b14eF;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{max-width:1150px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:2px;font-size:1.2rem}.brand img{width:38px;height:38px;object-fit:cover;border-radius:10px;border:1px solid #8d6cff88}.brand span{color:var(--accent)}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks button,.menu-toggle{border:1px solid transparent;background:transparent;color:var(--muted);padding:9px 13px;border-radius:10px;cursor:pointer}.navlinks button:hover,.navlinks button.active{color:white;background:var(--panel2);border-color:var(--line)}.navlinks button.privacy-nav{color:#e4dcff;border-color:#8d6cff88;background:#8d6cff18;font-weight:850}.navlinks button.privacy-nav:hover,.navlinks button.privacy-nav.active{background:#8d6cff35;border-color:var(--accent)}.menu-toggle{display:none}.page{display:none;max-width:1150px;margin:auto;padding:58px 22px 80px;min-height:calc(100vh - 70px)}.page.active{display:block;animation:fade .25s ease}@keyframes fade{from{opacity:.25;transform:translateY(5px)}to{opacity:1;transform:none}}.hero{min-height:68vh;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}.eyebrow{color:var(--accent2);font-weight:800;text-transform:uppercase;letter-spacing:3px;font-size:.78rem}.hero h1{font-size:clamp(2.8rem,7vw,5.7rem);line-height:1.02;letter-spacing:-3px;margin:15px 0 20px}.hero h1 span{background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:1.12rem;color:var(--muted);max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{border:1px solid var(--line);background:var(--panel2);color:white;padding:12px 18px;border-radius:12px;cursor:pointer;font-weight:750}.btn.primary{background:linear-gradient(110deg,#8d6cff,#5b54cf);border-color:transparent;box-shadow:0 8px 30px #795aff35}.btn:hover{transform:translateY(-2px);filter:brightness(1.1)}.hero-art{min-height:330px;border:1px solid #49406c;border-radius:28px;background:linear-gradient(145deg,#201d3c,#101726 65%);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 30px 100px #0005}.logo-hero{padding:28px;gap:0}.logo-hero img{display:block;width:min(100%,520px);height:auto;object-fit:contain;border-radius:22px;box-shadow:0 18px 60px #0006}.orb{width:205px;height:205px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#d9d0ff,#9479ff 24%,#38327d 58%,#111426 72%);box-shadow:0 0 70px #987bff75, inset -18px -22px 35px #080b17}.ring{position:absolute;width:285px;height:95px;border:2px solid #74e6dd9c;border-radius:50%;transform:rotate(-28deg)}.ring.r2{width:310px;height:125px;transform:rotate(48deg);border-color:#a18bff9c}.hero-art small{position:absolute;bottom:20px;letter-spacing:4px;color:#b9c6e9}.section-title{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 8px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:25px}.card{background:linear-gradient(145deg,var(--panel),#0e1220);border:1px solid var(--line);border-radius:18px;padding:24px}.card h3{margin:0 0 10px;font-size:1.15rem}.card p,.card li{color:var(--muted)}.card ul{padding-left:21px}.card li{margin:8px 0}.icon{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#9b7bff20;color:var(--accent2);font-size:1.25rem;margin-bottom:12px}.privacy-callout{margin-top:24px;display:flex;align-items:flex-start;gap:18px;border-color:#8d6cff99;background:linear-gradient(120deg,#211b40,#111522)}.privacy-callout .icon{flex-shrink:0}.privacy-callout p{color:var(--muted)}.about-expanded{margin-top:60px}.privacy-summary{margin:20px 0 24px}.privacy-summary ul{margin-bottom:0;padding-left:22px}.policy-block{margin-top:18px}.policy-block h3{color:#d7ceff}.form-wrap{max-width:850px}.form-intro{margin-bottom:25px}.role-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.role-tabs button{background:var(--panel);border:1px solid var(--line);color:var(--muted);border-radius:11px;padding:10px 14px;cursor:pointer}.role-tabs button.active{background:#8d6cff26;color:white;border-color:var(--accent)}.application-form{display:none}.application-form.active{display:block}.field{margin:17px 0}.field label{display:block;font-weight:700;margin-bottom:7px}.field small{display:block;color:var(--muted);margin-top:4px}.field input,.field select,.field textarea{width:100%;padding:12px 13px;background:#0a0e19;color:white;border:1px solid #35405c;border-radius:10px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px #9b7bff20}.field input[type=checkbox]{width:auto}.checkline{display:flex;align-items:flex-start;gap:10px}.checkline input{margin-top:7px}.notice{border:1px solid #6652a8;background:#8d6cff14;padding:14px 16px;border-radius:12px;color:#d9d1ff}.status{margin-top:15px;color:var(--accent2);white-space:pre-wrap}.footer{border-top:1px solid var(--line);padding:25px 22px;color:var(--muted);text-align:center}.footer strong{color:white}.hidden{display:none!important}@media(max-width:760px){.hero{grid-template-columns:1fr;min-height:auto;padding:30px 0}.hero-art{min-height:270px}.grid{grid-template-columns:1fr}.menu-toggle{display:block}.nav{flex-wrap:wrap}.navlinks{display:none;width:100%;flex-direction:column}.navlinks.open{display:flex}.navlinks button{text-align:left}.page{padding-top:35px}.hero h1{letter-spacing:-1.5px}}
+</style>
+</head>
+<body>
+<header class="topbar"><nav class="nav" aria-label="Main navigation">
+<a class="brand" href="#" onclick="showPage('home');return false"><img src="LYRA-Corp-Logo.png" alt="LYRA-Corp logo">LYRA<span>-</span>Corp</a>
+<button class="menu-toggle" onclick="document.querySelector('.navlinks').classList.toggle('open')" aria-label="Toggle navigation">☰ Menu</button>
+<div class="navlinks">
+<button class="active" data-page="home" onclick="showPage('home')">Home</button>
+<button data-page="about" onclick="showPage('about')">About</button>
+<button class="privacy-nav" data-page="privacy" onclick="showPage('privacy')">🛡 Privacy Policy</button>
+<button data-page="applications" onclick="showPage('applications')">Applications</button>
+</div></nav></header>
+<main>
+<section id="home" class="page active">
+<div class="hero"><div><div class="eyebrow">Independent game development</div><h1>We build worlds.<br><span>You play them.</span></h1><p class="lead">LYRA-Corp brings ideas to life through gameplay engineering, thoughtful design, and immersive digital experiences.</p><div class="actions"><button class="btn primary" onclick="showPage('about')">About LYRA-Corp ↗</button><button class="btn" onclick="showPage('applications')">Join the team</button></div></div><div class="hero-art logo-hero" aria-label="LYRA-Corp company logo"><img src="LYRA-Corp-Logo.png" alt="LYRA-Corp logo"><small>IMAGINE · CREATE · PLAY</small></div></div>
+<div class="grid"><article class="card"><div class="icon">✦</div><h3>Creative development</h3><p>From the first concept to a playable build, we bring design and technology together.</p></article><article class="card"><div class="icon">⌘</div><h3>Built by collaborators</h3><p>We value clear communication, creative problem-solving, and a shared love of games.</p></article></div>
+<div class="card privacy-callout"><div class="icon">🛡</div><div><h3>Your privacy matters</h3><p>Review how LYRA-Corp describes data collection, security, and user rights. We encourage visitors and applicants to read the policy before sharing personal information.</p><button class="btn primary" onclick="showPage('privacy')">Read our Privacy Policy →</button></div></div>
+<section class="about-expanded"><div class="eyebrow">Inside the studio</div><h2 class="section-title">How LYRA-Corp operates</h2><p class="lead">We approach game development as a collaborative production process: define the goal, build a workable version, test it, learn from feedback, and improve it.</p>
+<div class="grid">
+<article class="card"><div class="icon">01</div><h3>Vision &amp; planning</h3><p>We start by identifying the game’s audience, core experience, creative direction, target platforms, and realistic scope. Ideas are turned into feature lists, design notes, milestones, and a prioritized task backlog.</p></article>
+<article class="card"><div class="icon">02</div><h3>Small, testable milestones</h3><p>Rather than waiting until the end to test everything, work can be split into prototypes and playable builds. Each milestone should have a clear goal, an owner, and a way to check whether it is complete.</p></article>
+<article class="card"><div class="icon">03</div><h3>Specialized team roles</h3><p>Developers implement gameplay and systems; programmers and scripters build reliable code; modelers and designers create visual assets and experiences. Team members coordinate so art, code, audio, and level design fit together.</p></article>
+<article class="card"><div class="icon">04</div><h3>Communication &amp; collaboration</h3><p>Progress, blockers, decisions, and feedback should be shared clearly. A task board and agreed communication channels help everyone understand priorities, responsibilities, and what needs attention next.</p></article>
+<article class="card"><div class="icon">05</div><h3>Integration &amp; quality checks</h3><p>Features are integrated into the project and tested for bugs, usability, performance, and platform needs. Issues are documented, prioritized, fixed, and retested before a release is considered ready.</p></article>
+<article class="card"><div class="icon">06</div><h3>Release &amp; ongoing support</h3><p>After release, a team may review player feedback, resolve issues, improve performance, and plan updates. New features should be evaluated against quality, scope, and the long-term direction of the game.</p></article>
+</div>
+<div class="card"><h3>How we make decisions</h3><ul><li><strong>Player experience:</strong> prioritize features that improve fun, clarity, accessibility, and reliability.</li><li><strong>Practical scope:</strong> match plans to available time, skills, and tools; adjust early when risks appear.</li><li><strong>Accountability:</strong> define ownership for tasks and communicate changes that affect other contributors.</li><li><strong>Iterative improvement:</strong> use playtests, bug reports, and feedback to guide the next development cycle.</li><li><strong>Responsible collaboration:</strong> respect project access, private information, intellectual property, and agreed team policies.</li></ul></div>
+<p class="muted">This is a general description of the intended workflow. Only publish statements about current team size, tools, security controls, payment arrangements, or business practices if they accurately reflect LYRA-Corp’s actual operations.</p></section>
+</section>
+<section id="about" class="page">
+<div class="eyebrow">Who we are</div><h1 class="section-title">About: LYRA-Corp</h1><p class="lead">A look at the core functions, workflow, and common models used in game development.</p>
+<div class="grid">
+<article class="card"><div class="icon">01</div><h3>Concept &amp; Pre-Production</h3><p>Defining the game’s core vision, genre, target audience, storyline, and design documents.</p></article>
+<article class="card"><div class="icon">02</div><h3>Programming &amp; Engineering</h3><p>Writing code for gameplay mechanics, artificial intelligence (AI), networking, user interfaces (UI), and graphics using engines like Unity or Unreal Engine.</p></article>
+<article class="card"><div class="icon">03</div><h3>Art &amp; Audio Production</h3><p>Creating 2D/3D models, animations, environments, sound effects, and musical scores.</p></article>
+<article class="card"><div class="icon">04</div><h3>Quality Assurance (QA)</h3><p>Testing builds, tracking down bugs, and ensuring smooth performance and platform compliance before and after launch.</p></article>
+<article class="card"><div class="icon">05</div><h3>Post-Launch Support</h3><p>Delivering patches, content updates, LiveOps events, and porting services to new hardware.</p></article>
+<article class="card"><div class="icon">↗</div><h3>Developer vs. Publisher</h3><p>Developers focus strictly on making the game, whereas publishers typically fund, market, package, and distribute it (though some large companies handle both).</p></article>
+<article class="card"><div class="icon">↻</div><h3>Production Methodologies</h3><p>Utilizing frameworks like Agile, Scrum, Kanban, or Waterfall to structure workflow milestones and player feedback loops.</p></article>
+<article class="card"><div class="icon">◎</div><h3>Scale &amp; Structure</h3><p>Ranging from single-person indie operations to large, multi-studio corporations employing hundreds of specialized artists, engineers, and designers.</p></article>
+</div></section>
+<section id="privacy" class="page">
+<div class="eyebrow">Important · Please review</div><h1 class="section-title">LYRA-Corp: Privacy Policy</h1><p class="lead">This policy explains the information LYRA-Corp says it collects, how that information is used and protected, and the choices described for users and applicants.</p><div class="notice privacy-summary"><strong>Privacy at a glance</strong><ul><li>Use information for stated service and operational purposes.</li><li>Do not sell or rent personal information to third parties.</li><li>Limit access to people who need it for their work.</li><li>Review your options for access, correction, and marketing opt-out.</li></ul></div>
+<div class="card policy-block"><h3>Data Collection &amp; Use</h3><ul><li><strong>Types of Data:</strong> Collects personal, financial, benefit, and system data through standard web technologies and administrative interactions.</li><li><strong>Strict Usage:</strong> Limits data use strictly to service administration and operational needs.</li><li><strong>No Selling or Renting:</strong> Never sells or rents personal data to third parties, and prohibits unauthorized external sharing.</li></ul></div>
+<div class="card policy-block"><h3>Security Measures</h3><ul><li><strong>Encryption:</strong> Uses encrypted web and data sessions, bank-level payroll encryption, and Proofpoint email encryption.</li><li><strong>Assessments &amp; Backups:</strong> Conducts annual third-party risk assessments, maintains full backup and redundancy with generator power, and handles secure paper data destruction.</li><li><strong>Employee Compliance:</strong> Restricts employee access to a business need-to-know basis, educates staff on confidentiality, and enforces strict disciplinary policies for violations.</li></ul></div>
+<div class="card policy-block"><h3>User Rights</h3><ul><li><strong>Marketing &amp; Access:</strong> Users can opt-out of marketing communications and access or correct their personal data.</li><li><strong>HR Benefit Data:</strong> HR and benefit data cannot be deleted due to regulatory and administrative retention requirements.</li><li><strong>Anonymous Reporting:</strong> Offers Confidentially Speaking for anonymous reporting of ethical or legal violations.</li></ul></div>
+<p class="muted">Note: Publish this as a real privacy policy only after verifying that every statement accurately reflects LYRA-Corp’s actual practices and applicable legal requirements.</p>
+</section>
+<section id="applications" class="page">
+<div class="form-wrap"><div class="eyebrow">Work with us</div><h1 class="section-title">LYRA-Corp: Applications</h1><p class="lead form-intro">Choose a role and fill in the application. Submissions are sent to the LYRA-Corp applications Discord channel through a configured webhook.</p>
+<div class="notice"><strong>Before you apply:</strong> Applicants must be at least 15 years old and have at least 2 years of relevant experience. The stated compensation is 20% of overall profit; make sure you understand and agree to the terms before applying.</div>
+<div class="role-tabs" role="tablist" aria-label="Application role"><button class="active" data-role="developer" onclick="chooseRole('developer')">Developer</button><button data-role="programmer" onclick="chooseRole('programmer')">Programmer / Scripter</button><button data-role="modeler" onclick="chooseRole('modeler')">Modeler / Designer</button></div>
+<form class="application-form active" id="form-developer" data-title="Developer" onsubmit="submitApplication(event,'Developer')">
+<div class="field"><label for="dev-age">1. What is your age?</label><input id="dev-age" name="Age" type="number" min="15" max="120" required><small>Minimum age: 15</small></div>
+<div class="field"><label for="dev-dob">2. What is your date of birth?</label><input id="dev-dob" name="Date of Birth" type="date" required></div>
+<div class="field"><label for="dev-hours">3. Between what hours are you available per week?</label><input id="dev-hours" name="Hours Available Per Week" type="text" placeholder="e.g. 6–10 hours per week" required></div>
+<div class="field"><label for="dev-experience">4. How long have you been developing?</label><input id="dev-experience" name="Development Experience" type="text" placeholder="e.g. 3 years" required><small>Minimum experience: 2 years</small></div>
+<div class="field"><label class="checkline"><input name="Profit Agreement" type="checkbox" required><span>5. I understand that I will only receive a payment of 20% of overall profit.</span></label></div>
+<div class="field"><label for="dev-discord">6. What is your Discord @User?</label><input id="dev-discord" name="Discord" type="text" placeholder="@username" required></div>
+<button class="btn primary" type="submit">Send application to Discord ↗</button><p class="status" aria-live="polite"></p></form>
+<form class="application-form" id="form-programmer" data-title="Programmer / Scripter" onsubmit="submitApplication(event,'Programmer / Scripter')">
+<div class="field"><label for="prog-age">1. What is your age?</label><input id="prog-age" name="Age" type="number" min="15" max="120" required><small>Minimum age: 15</small></div>
+<div class="field"><label for="prog-dob">2. What is your date of birth?</label><input id="prog-dob" name="Date of Birth" type="date" required></div>
+<div class="field"><label for="prog-hours">3. Between what hours are you available per week?</label><input id="prog-hours" name="Hours Available Per Week" type="text" placeholder="e.g. 6–10 hours per week" required></div>
+<div class="field"><label for="prog-experience">4. How long have you been programming/scripting?</label><input id="prog-experience" name="Programming Experience" type="text" placeholder="e.g. 3 years" required><small>Minimum experience: 2 years</small></div>
+<div class="field"><label class="checkline"><input name="Profit Agreement" type="checkbox" required><span>5. I understand that I will only receive a payment of 20% of overall profit.</span></label></div>
+<div class="field"><label for="prog-discord">6. What is your Discord @User?</label><input id="prog-discord" name="Discord" type="text" placeholder="@username" required></div>
+<button class="btn primary" type="submit">Send application to Discord ↗</button><p class="status" aria-live="polite"></p></form>
+<form class="application-form" id="form-modeler" data-title="Modeler / Designer" onsubmit="submitApplication(event,'Modeler / Designer')">
+<div class="field"><label for="mod-age">1. What is your age?</label><input id="mod-age" name="Age" type="number" min="15" max="120" required><small>Minimum age: 15</small></div>
+<div class="field"><label for="mod-dob">2. What is your date of birth?</label><input id="mod-dob" name="Date of Birth" type="date" required></div>
+<div class="field"><label for="mod-hours">3. Between what hours are you available per week?</label><input id="mod-hours" name="Hours Available Per Week" type="text" placeholder="e.g. 6–10 hours per week" required></div>
+<div class="field"><label for="mod-experience">4. How long have you been a modeler/designer?</label><input id="mod-experience" name="Modeling/Design Experience" type="text" placeholder="e.g. 3 years" required><small>Minimum experience: 2 years</small></div>
+<div class="field"><label class="checkline"><input name="Profit Agreement" type="checkbox" required><span>5. I understand that I will only receive a payment of 20% of overall profit.</span></label></div>
+<div class="field"><label for="mod-discord">6. What is your Discord @User?</label><input id="mod-discord" name="Discord" type="text" placeholder="@username" required></div>
+<button class="btn primary" type="submit">Send application to Discord ↗</button><p class="status" aria-live="polite"></p></form>
+<p class="muted">Setup: add your Discord webhook URL in the JavaScript configuration near the bottom of this file. Important: a webhook URL embedded in public HTML can be copied and abused. For a public website, use a small server-side endpoint and keep the webhook URL secret. Date of birth is sensitive personal information; collect it only if necessary and restrict access to application submissions.</p>
+</div></section>
+</main>
+<footer class="footer"><strong>LYRA-Corp</strong> · Game development with imagination at its core.</footer>
+<script>
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.navlinks button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));document.querySelector('.navlinks').classList.remove('open');window.scrollTo({top:0,behavior:'smooth'});}
+function chooseRole(role){document.querySelectorAll('.role-tabs button').forEach(b=>b.classList.toggle('active',b.dataset.role===role));document.querySelectorAll('.application-form').forEach(f=>f.classList.toggle('active',f.id==='form-'+role));}
+// Paste your Discord webhook URL here. Do not publish this HTML with a real webhook URL:
+// anyone who can view the page source can copy it. A server-side endpoint is safer.
+const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1564390663074611314/c5UVQWahq5NngUWBxKiyQJPpWLs_atnOvgg6X5VQTG39r-CcUU3v-kiLnQjNQgxw_vZL";
+
+async function submitApplication(event, role) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const status = form.querySelector('.status');
+  const data = new FormData(form);
+  const age = Number(data.get('Age'));
+  const experience = String(data.get('Development Experience') || data.get('Programming Experience') || data.get('Modeling/Design Experience') || '');
+  if (age < 15) { status.textContent = 'You must be at least 15 years old to apply.'; return; }
+  if (!/\d/.test(experience)) { status.textContent = 'Please include your years of relevant experience.'; return; }
+  if (!DISCORD_WEBHOOK_URL.startsWith('https://discord.com/api/webhooks/') && !DISCORD_WEBHOOK_URL.startsWith('https://discordapp.com/api/webhooks/')) {
+    status.textContent = 'Discord webhook is not configured yet. Add your webhook URL in the JavaScript configuration.'; return;
+  }
+  const fields = [];
+  for (const [key, value] of data.entries()) {
+    if (key === 'Profit Agreement') fields.push({name:'Profit Agreement', value:'Agreed to 20% of overall profit', inline:false});
+    else fields.push({name:key, value:String(value).slice(0,1000) || 'Not provided', inline:true});
+  }
+  const payload = {username:'LYRA-Corp Applications', embeds:[{title:`New LYRA-Corp Application — ${role}`, color:10190335, fields, footer:{text:'LYRA-Corp application form'}, timestamp:new Date().toISOString()}], allowed_mentions:{parse:[]}};
+  const button = form.querySelector('button[type="submit"]');
+  button.disabled = true; button.textContent = 'Sending application…'; status.textContent = '';
+  try {
+    const response = await fetch(DISCORD_WEBHOOK_URL, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
+    if (!response.ok) throw new Error(`Discord returned HTTP ${response.status}`);
+    status.textContent = 'Application sent to the Discord webhook successfully.'; form.reset();
+  } catch (error) {
+    status.textContent = 'Could not send the application. Check the webhook URL and browser console. For a public website, a server-side endpoint is recommended.';
+  } finally { button.disabled = false; button.textContent = 'Send application to Discord ↗'; }
+}
+</script>
+</body></html>
